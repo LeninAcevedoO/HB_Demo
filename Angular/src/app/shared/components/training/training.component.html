@@ -1,0 +1,14 @@
+<mat-card class="score-card">
+    <mat-card-content>
+      <p class="name">
+        Training Completion
+        <span class="score-text">{{ (training*100) | number: '1.0-0' }}%</span>
+      </p>
+      <div class="score-container">
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width.%]="getProgressWidth()"></div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,21 @@
+<mat-card class="score-card">
+  <mat-card-content class="mainContainer">
+    <div class="w-full flex-center" style="justify-content: space-between;">
+      <h3 class="ellipsis w-75" [ngStyle]="{'font-weight' : demandCompare ? 'bold' : 'lighter'}">{{ name }}</h3>
+      <span class="w-50 ellipsis" *ngIf="demandCompare">{{ job }}</span><span style="font-weight: bold;">{{ demand }}</span>
+    </div>
+    <div class="score-container">
+      <div *ngFor="let bar of bars; let i = index" [ngClass]="getBarClass(i, bars, 1)">
+        &nbsp;
+      </div>
+    </div>
+    <div class="w-full flex-center" style="justify-content: space-between; margin-top: 1rem;" *ngIf="demandCompare">
+      <span class="ellipsis w-50">{{ jobCompare }}</span><span style="font-weight: bold;">{{ demandCompare }}</span>
+    </div>
+    <div class="score-container" *ngIf="demandCompare">
+      <div *ngFor="let bar of barsCompare; let i = index" [ngClass]="getBarClass(i, barsCompare, 2)">
+        &nbsp;
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

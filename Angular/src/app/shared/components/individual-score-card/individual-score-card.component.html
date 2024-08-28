@@ -1,0 +1,23 @@
+<mat-card class="score-card" (click)="handlRoute()">
+  <mat-card-content>
+    <div class="w-full flex-center" style="justify-content: space-between;">
+      <h3 class="name w-75 ellipsis" style="text-align: left;" [ngStyle]="{'font-weight' : scoreCompare ? 'bold' : 'lighter'}">{{name}}</h3>
+      <p class="name w-75 ellipsis" *ngIf="scoreCompare">{{job}}</p>
+      <span class="score-text" style="font-weight: bold !important;">{{ formatToTwoDecimals(score) }}/10</span>
+    </div>
+    <div class="score-container">
+      <div *ngFor="let bar of bars; let i = index" [ngClass]="getBarClass(i, score)">
+        &nbsp;
+      </div>
+    </div>
+    <div class="w-full flex-center" style="justify-content: space-between; margin-top: 1rem;" *ngIf="scoreCompare">
+      <p class="name w-75 ellipsis">{{jobCompare}}</p>
+      <span class="score-text" style="font-weight: bold;">{{ formatToTwoDecimals(scoreCompare) }}/10</span>
+    </div>
+    <div class="score-container" *ngIf="scoreCompare">
+      <div *ngFor="let bar of bars; let i = index" [ngClass]="getBarClass(i, scoreCompare)">
+        &nbsp;
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

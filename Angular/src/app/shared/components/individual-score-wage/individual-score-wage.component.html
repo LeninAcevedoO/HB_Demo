@@ -1,0 +1,23 @@
+<mat-card class="score-card">
+  <mat-card-content class="mainContainer">
+    <div class="w-full flex-center" style="justify-content: space-between;">
+      <h3 class="ellipsis w-75" [ngStyle]="{'font-weight' : jobCompare ? 'bold' : 'lighter'}">{{ name }}</h3>
+      <span class="ellipsis w-75" *ngIf="jobCompare">{{ job }}</span><span style="font-weight: bold;">{{ wage }}</span>
+    </div>
+    <div class="score-container">
+      <div class="progress-bar-container">
+        <div class="progress-bar filled-blue" [style.width.%]="getProgressWidth(wage)"></div>
+        <!-- <div class="progress-bar" [style.width.%]="getProgressWidth()" [ngClass]="wageCompare > wage ? 'filled-blue' : 'filled-red'"></div> -->
+      </div>
+    </div>
+    <div class="w-full flex-center" style="justify-content: space-between; margin-top: 1rem;" *ngIf="jobCompare">
+      <span class="ellipsis w-75">{{ jobCompare }}</span><span style="font-weight: bold;">{{ wageCompare }}</span>
+    </div>
+    <div class="score-container">
+      <div class="progress-bar-container" *ngIf="jobCompare">
+        <div class="progress-bar filled-red" [style.width.%]="getProgressWidth(wageCompare)"></div>
+        <!-- <div class="progress-bar" [style.width.%]="getProgressWidth()" [ngClass]="wageCompare < wage ? 'filled-blue' : 'filled-red'"></div> -->
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

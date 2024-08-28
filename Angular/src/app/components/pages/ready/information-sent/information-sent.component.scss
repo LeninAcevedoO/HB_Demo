@@ -1,0 +1,47 @@
+.messageIcon {
+    scale: 5;
+    color: var(--primary-color);
+}
+
+.txtSent {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+.gradient-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #a810d2, #004986, #1ea1f2);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    width: 25rem;
+    font-weight: bold;
+}
+
+.icon-btn {
+    margin-right: 0.5rem;
+}
+
+.txtLabel {
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+// .gradient-button:hover {
+//     opacity: 1.2;
+// }
+
+.back{
+    margin-top: 40px;
+    margin-left: 15%;
+    color: var(--secondary-color);
+    background-color: #fff !important;
+}

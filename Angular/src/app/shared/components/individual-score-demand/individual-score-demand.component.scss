@@ -1,0 +1,52 @@
+.score-card {
+  // width: 400px;
+  max-width: 100%;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #F3F6F9 !important;
+}
+
+.name {
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score-container {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.score-container div {
+  flex: 1;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.score-container div.filled-blue {
+  background-color: var(--secondary-color);;
+}
+
+.score-container div.filled-red {
+  background-color: var(--warn-color);;
+}
+
+.score-container div.empty {
+  background-color: #cbd1d5;
+}
+
+.score-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 270px;
+  white-space: nowrap;
+}
+
+.mainContainer {
+  line-height: 2rem;
+}

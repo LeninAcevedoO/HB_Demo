@@ -1,0 +1,63 @@
+<div class="w-full flex-center min-h-full">
+  <div class="w-full claimant-container">
+    <h1 class="txtClipped">Claimant Homepage</h1>
+  </div>
+  <div class="w-full flex-center btnsContainer">
+    <button mat-raised-button class="btnBlue" color="primary">Confirmation History</button>
+    <button mat-raised-button class="btnBlue" color="primary">Correspondence History</button>
+    <button mat-stroked-button class="btnBlue" color="primary"
+      (click)="boucherInput.click()"><mat-icon>upload</mat-icon> File boucher</button>
+    <input type="file" #boucherInput (change)="onFileSelected($event)" hidden>
+  </div>
+  <div class="carder flex-center">
+    <div class="flex-center card-header-container w-full">
+      <h1>PIVOT</h1>
+      <h3>AN INDIANA WORKFORCE ENGINE</h3>
+    </div>
+    <div class="carder-content-container w-full">
+      <button mat-stroked-button class="btnStars"><mat-icon>stars</mat-icon> TOP RECOMMENDED JOBS</button>
+      <h1>Logistician</h1>
+      <h3>$23 / hour</h3>
+      <div class="w-full flex-center">
+        <button mat-raised-button class="btnViewDetails">View details...</button>
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex-center ad-container">
+    <h3 class="ad-txt">Need help finding a job? Want to explore other career opportunities?</h3>&nbsp;&nbsp;&nbsp;
+    <h3 class="ad-txt" style="font-weight: bolder;">Visit your local WorkOne Carrer Center</h3>
+  </div>
+  <div class="w-full flex-center">
+    <button mat-stroked-button class="btnBlue" color="primary"><mat-icon>location_on</mat-icon> Locate your
+      center</button>
+  </div>
+  <div class="w-full tableContainer">
+    <h1 class="header-table">Claims</h1>
+    <table class="claims-table">
+      <thead>
+        <th>Claim status</th>
+        <th>Program</th>
+        <th>BYE</th>
+        <th>Paid to Date</th>
+        <th>MBA</th>
+        <th>WBA</th>
+        <th>RBA</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let claim of claims" class="hvrPush">
+          <td>{{ claim.status }}</td>
+          <td>{{ claim.program }}</td>
+          <td>{{ claim.bye }}</td>
+          <td>{{ claim.paidDate | customCurrency }}</td>
+          <td>{{ claim.mba | customCurrency }}</td>
+          <td>{{ claim.wba | customCurrency }}</td>
+          <td>{{ claim.rba | customCurrency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="w-full flex-center img-container">
+    <img src="assets/img/EstrechaManos.png" class="image-style">
+    <img src="assets/img/estrechaManos2.png" class="image-style">
+  </div>
+</div>
