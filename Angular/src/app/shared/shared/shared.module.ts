@@ -9,14 +9,8 @@ import { MainService } from 'src/app/services/services/main.service';
 import { MaterialsModule } from '../materials/materials.module';
 import { BuscadorGenericoPipe } from '../pipes/buscador-generico.pipe';
 import { CardPipe } from '../pipes/card.pipe';
-import { JobDetailsComponent } from '../components/job-details/job-details.component';
-import { IndividualScoreCardComponent } from '../components/individual-score-card/individual-score-card.component';
-import { ScoreCardComponent } from '../components/score-card/score-card.component';
-import { IndividualScoreDemandComponent } from '../components/individual-score-demand/individual-score-demand.component';
-import { TrainingComponent } from '../components/training/training.component';
-import { IndividualScoreWageComponent } from '../components/individual-score-wage/individual-score-wage.component';
 import { PhoneNumberPipe } from '../pipes/phone-number.pipe';
-import { InterestComponent } from '../components/interest/interest.component';
+import { CustomCurrencyPipe } from '../pipes/custom-currency.pipe';
 
 const modules = [
   FormsModule,
@@ -30,15 +24,9 @@ const modules = [
 const GenericComponents = [
   BuscadorGenericoPipe,
   CardPipe,
+  CustomCurrencyPipe,
   Page404Component,
-  JobDetailsComponent,
-  IndividualScoreCardComponent,
-  ScoreCardComponent,
   PhoneNumberPipe,
-  IndividualScoreWageComponent,
-  TrainingComponent,
-  IndividualScoreDemandComponent,
-  InterestComponent,
 ]
 
 @NgModule({

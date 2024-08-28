@@ -16,48 +16,34 @@ import { SpinnerInterceptor } from './services/interceptors/spinner.interceptor'
 import { ContextService } from './services/services/context.service';
 import { HandleErrorInterceptor } from './services/interceptors/handle-error.interceptor';
 //------------------------- Componentes ---------------------------------
-import { LoginComponent } from './components/login/login.component';
 import { ToolbarComponent } from './components/pages/layouts/toolbar/toolbar.component';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/pages/home/home.component';
 import { CustomCurrencyPipe } from './shared/pipes/custom-currency.pipe';
-import { PrivacyComponent } from './components/pages/privacy/privacy.component';
-import { PivotComponent } from './components/pages/pivot/pivot.component';
-import { ClaimsComponent } from './components/pages/claims/claims.component';
-import { RecomendationsComponent } from './components/pages/recomendations/recomendations.component';
-import { OtherRecommendationsComponent } from './components/pages/recomendations/other-recommendations/other-recommendations.component';
-import { VistaComponent } from './components/pages/vista/vista.component';
-import { ReadyComponent } from './components/pages/ready/ready.component';
-import { InformationSentComponent } from './components/pages/ready/information-sent/information-sent.component';
-import { ModalChangeReadyInfoComponent } from './components/pages/ready/modal-change-ready-info/modal-change-ready-info.component';
 import { ComingComponent } from './components/pages/coming/coming.component';
 import { OtherSystemComponent } from './components/pages/layouts/other-system/other-system.component';
 import { ChatbotComponent } from './components/pages/chatbot/chatbot.component';
+import { SingUpComponent } from './components/auth/sing-up/sing-up.component';
+import { LoginComponent } from './components/auth/login/login.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    //------------------- System components -------------------
+    //************************ System components ************************
+    // --- Layouts ---
     ToolbarComponent,
-    LoginComponent,
-    DashboardComponent,
-    HomeComponent,
-    CustomCurrencyPipe,
-    PrivacyComponent,
-    PivotComponent,
-    ClaimsComponent,
-    RecomendationsComponent,
-    OtherRecommendationsComponent, 
-    VistaComponent, 
-    ReadyComponent, 
-    InformationSentComponent,
-    ModalChangeReadyInfoComponent,
-    ComingComponent,
     OtherSystemComponent,
+    // --- Admin components ---
+    DashboardComponent,
+    // --- User compoents ---
+    SingUpComponent,
+    HomeComponent,
+    ComingComponent,
     ChatbotComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
